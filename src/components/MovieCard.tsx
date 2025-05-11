@@ -12,7 +12,7 @@ const MovieCard = ({ movie }: { movie: MovieType }) => {
                     className="movie-img"
                 />
                 <h4 className="movie-title">{movie.title}</h4>
-                <p className="movie-rating">⭐ {movie.vote_average}</p>
+                <p className="movie-rating"> &#127775; {movie.vote_average}</p>
             </Link>
         </div>
     );
