@@ -1,5 +1,5 @@
 import './styles.css';
-
+// ---------------------------------------------------------------------------
 const Pagination = ({ page, onChange }: { page: number; onChange: (p: number) => void }) => {
     return (
         <div className="pagination">
@@ -13,5 +13,5 @@ const Pagination = ({ page, onChange }: { page: number; onChange: (p: number) =>
         </div>
     );
 };
-
+// ---------------------------------------------------------------------------
 export default Pagination;

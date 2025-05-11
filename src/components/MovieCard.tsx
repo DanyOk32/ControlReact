@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { MovieType } from '../services/api';
 import './styles.css';
-
+// ---------------------------------------------------------------------------
 const MovieCard = ({ movie }: { movie: MovieType }) => {
     return (
         <div className="movie-card">
@@ -17,5 +17,5 @@ const MovieCard = ({ movie }: { movie: MovieType }) => {
         </div>
     );
 };
-
+// ---------------------------------------------------------------------------
 export default MovieCard;

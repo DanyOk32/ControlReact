@@ -5,18 +5,16 @@ import MovieCard from './MovieCard';
 import GenresFilter from './GenresFilter';
 import Pagination from './Pagination';
 import './styles.css';
-
+// ---------------------------------------------------------------------------
 const MoviesList = () => {
     const [movies, setMovies] = useState<MovieType[]>([]);
     const [selectedGenre, setSelectedGenre] = useState<number | null>(null);
     const [page, setPage] = useState(1);
-
     useEffect(() => {
         getMovies(page, selectedGenre || undefined).then(({ data }) => {
             setMovies(data.results);
         });
     }, [page, selectedGenre]);
-
     return (
         <div className="movies-section">
             <GenresFilter onSelectGenre={setSelectedGenre} />
@@ -29,5 +27,5 @@ const MoviesList = () => {
         </div>
     );
 };
-
+// ---------------------------------------------------------------------------
 export default MoviesList;

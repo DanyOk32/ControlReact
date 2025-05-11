@@ -2,14 +2,12 @@ import { useEffect, useState } from 'react';
 import { getGenres } from '../services/api';
 import type { GenreType } from '../services/api';
 import './styles.css';
-
+// ---------------------------------------------------------------------------
 const GenresFilter = ({ onSelectGenre }: { onSelectGenre: (id: number) => void }) => {
     const [genres, setGenres] = useState<GenreType[]>([]);
-
     useEffect(() => {
         getGenres().then(setGenres);
     }, []);
-
     return (
         <div className="genres-filter">
             <h3>Жанры</h3>
@@ -23,5 +21,5 @@ const GenresFilter = ({ onSelectGenre }: { onSelectGenre: (id: number) => void }
         </div>
     );
 };
-
+// ---------------------------------------------------------------------------
 export default GenresFilter;
